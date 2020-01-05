@@ -1,24 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SearchBar from "../components/SearchBar";
 import { Feather } from '@expo/vector-icons';
 
 const SearchScreen = () => {
+    const [term, setTerm] = useState('');
     return (
-      <View style={styles.background}>
-        <Feather name="search" size={30} />
-        <SearchBar />
+      <View>
+        <SearchBar 
+            term={term} 
+            onTermChange={newTerm => setTerm(newTerm)} 
+            onTermSubmit={() => console.log('ontermsubmit')}
+            />
+        <Text>{term}</Text>
       </View>
     );
 };
 
 const styles = StyleSheet.create({
-  background: {
-    backgroundColor: "#F0EEEE",
-    height: 50,
-    borderRadius: 5,
-    marginHorizontal: 15
-  }
+  
 });
 
 
