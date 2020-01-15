@@ -24,12 +24,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#F0EEEE",
     height: 50,
     borderRadius: 5,
-    marginHorizontal: 15,
+    marginHorizontal: 10,
     flexDirection: 'row',
-    marginTop: 15
+    marginTop: 15,
+    marginBottom: 10
+
     
   }, 
-  inputStyle: {
+  inputStyle: { 
     flex: 1,
     fontSize: 18
   },
