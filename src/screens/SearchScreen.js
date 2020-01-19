@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import SearchBar from "../components/SearchBar";
 import useResults from "../hooks/useResults";
 import ResultsList from '../components/ResultsList';
+import FoodCard from '../components/FoodCard';
 
 
 const SearchScreen = () => {
@@ -37,6 +38,7 @@ const SearchScreen = () => {
             results={filterResultsByPrice("$$$")}
             title="Big Spender"
           />
+          <FoodCard />
         </ScrollView>
       </>
     );

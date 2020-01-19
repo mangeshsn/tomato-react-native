@@ -2,10 +2,9 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import ResultsDetail from './ResultsDetail';
-
+import FoodCard from './FoodCard';
 const ResultsList = ({ title, results }) => {
     return <View>
-        <Text style={styles.title}>{title}</Text>
         <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -13,7 +12,7 @@ const ResultsList = ({ title, results }) => {
             keyExtractor={(result)=>result.id}
             renderItem={
                 ({ item }) => {
-                    return <ResultsDetail result={item}/>
+                    return <FoodCard result={item}/>
                 }
             }
         />
